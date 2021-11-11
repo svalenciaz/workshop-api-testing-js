@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/svalenciaz/workshop-api-testing-js#readme",
   "devDependencies": {
+    "@types/superagent": "^4.1.13",
     "chai": "^4.3.4",
+    "chai-json-schema": "^1.5.1",
     "chai-subset": "^1.6.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
