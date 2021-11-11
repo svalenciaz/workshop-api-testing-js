@@ -7,6 +7,8 @@ const chaiSubset = require('chai-subset');
 chai.use(chaiSubset);
 const { expect } = chai;
 
+require('dotenv').config();
+
 const urlBase = 'https://api.github.com';
 const githubUserName = 'aperdomob';
 const name = 'Alejandro Perdomo';
@@ -33,7 +35,7 @@ describe('Github Api Test', () => {
     it('GET to find user', async () => {
       const response = await agent.get(`${urlBase}/users/${githubUserName}`)
         .auth('token', process.env.ACCESS_TOKEN)
-        .set('User-Agent', 'agent');
+        .set('User-Agent', 'santi');
 
       expect(response.status).to.equal(statusCode.OK);
       expect(response.body.name).to.equal(name);
